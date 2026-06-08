@@ -1,2 +1,2 @@
 # English-Japanese-Translator
-A simple english to Japanese translator using HTML CSS and JAVASCRIPT 
+A Simple English to Japanese translator using HTML,CSS and JavaScript   
