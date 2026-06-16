@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English to Japanese Translator</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
             background: #f0f0f0;
         }
         h2 { color: #333; }
-        input, button {
-            padding: 10px;
+        input {
+            padding: 12px;
             font-size: 16px;
-            margin: 5px;
+            width: 250px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
         }
         button {
+            padding: 12px 20px;
+            font-size: 16px;
             background: #4CAF50;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            margin-left: 5px;
         }
         #result {
-            margin-top: 20px;
-            font-size: 24px;
-            color: green;
+            margin-top: 25px;
+            font-size: 28px;
+            color: #d32f2f;
             font-weight: bold;
+            min-height: 40px;
         }
     </style>
 </head>
 <body>
     <h2>English to Japanese Translator</h2>
-    <input type="text" id="text" placeholder="Type English word...">
+    <input type="text" id="text" placeholder="Type: hello">
     <button onclick="translateWord()">Translate</button>
     <div id="result"></div>
 
     <script>
         function translateWord() {
-            let word = document.getElementById("text").value.toLowerCase().trim();
-            let result = document.getElementById("result");
+            const word = document.getElementById("text").value.toLowerCase().trim();
+            const result = document.getElementById("result");
             
-            let dictionary = {
-                Hello 
-              thank you 
-               sorry 
-                good morning 
-               good night 
-               good afternoon 
-               yes 
+            const dictionary = {
+                "hello": "こんにちは",
+                "thank you": "ありがとうございます",
+                "sorry": "ごめんなさい",
+                "good morning": "おはようございます",
+                "good night": "おやすみなさい",
+                "good evening": "こんばんは",
+                "yes": "はい",
+                "no": "いいえ"
             };
             
             if (dictionary[word]) {
